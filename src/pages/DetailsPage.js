@@ -51,4 +51,8 @@ class DetailsPage extends Component {
   }
 }
 
-export default connect(null, { checkoutBooking })(DetailsPage);
+const mapStateToProps = (state) => {
+  page: state.page.detailsPage;
+};
+
+export default connect(mapStateToProps, { checkoutBooking })(DetailsPage);
