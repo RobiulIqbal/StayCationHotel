@@ -23,7 +23,6 @@ class LandingPage extends Component {
 
   render() {
     const { page } = this.props;
-    console.log(page)
 
     if (!page.hasOwnProperty("landingPage")) return null;
 
@@ -32,7 +31,7 @@ class LandingPage extends Component {
         <Header {...this.props}></Header>
         <Hero refMostPicked={this.refMostPicked} data={page.landingPage.hero} />
         <MostPicked refMostPicked={this.refMostPicked} data={page.landingPage.mostPicked} />
-        <Categories data={page.landingPage.categories} />
+        <Categories data={page.landingPage.category} />
         <Testimony data={page.landingPage.testimonial} />
         <Footer />
       </>
