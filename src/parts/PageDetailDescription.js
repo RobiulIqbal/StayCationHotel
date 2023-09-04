@@ -12,7 +12,7 @@ export default function PageDetailDescription({ data }) {
           : data.imageId.map((feature, index) => {
               return (
                 <div key={`feature-${index}`} className="col-3" style={{ marginBottom: 20 }}>
-                  <img width="38" src={feature.imageUrl} alt={feature.name} className="d-block mb2" /> <span>{feature.qty}</span> <span className="text-gray-500 font-weight-light">{feature.name}</span>
+                  <img width="38" src={`${process.env.REACT_APP_HOST}/${feature.imageUrl}`} alt={feature.name} className="d-block mb2" /> <span>{feature.qty}</span> <span className="text-gray-500 font-weight-light">{feature.name}</span>
                 </div>
               );
             })}
